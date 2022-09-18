@@ -110,12 +110,12 @@ const [sendSuccess , setMessage] = useState("");
         document.getElementById('nameId').value="";
         document.getElementById('emailId').value="";
         document.getElementById('messageId').value="";
-        toast.success('Successfull !',{duration: 4000,style: {opacity: 0.4},})
+        toast.success('Successful',{duration: 4000,style: {opacity: 0.4},})
       }).catch(err=>{
         console.log("err: ",err);
         setMessage("false");
         setText(<SentFailed></SentFailed>);
-        toast.error('Failed to send message!',{duration: 4000,});
+        toast.error('Failed to send message',{duration: 4000,});
       });
       
    }
