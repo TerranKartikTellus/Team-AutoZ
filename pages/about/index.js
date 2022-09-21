@@ -10,16 +10,25 @@ export default function About(){
   return(
     <main className="bg-gra  rounded-sm text-gray-100  md:bg-gray-900/5   snap-y snap-mandatory h-screen overflow-x-hidden  select-none">
          <HeadTag title="About | AutoZ" cardTitle="LATEST | AutoZ" description="LATEST | AutoZ" image="" ></HeadTag>
-     <Top  main={"About"} sub="AutoZ" mini={""}></Top>
+     <Top  main={"About"} sub={"Automating Vehicles A to Z "} mini={""}></Top>
      <div className="hidden md:block my-auto h-full snap-y snap-mandatory ">
-       <div className="snap-center h-full"><Part1></Part1></div>
+       <div className="h-full flex flex-col item-center justify-center">
+        <Part1></Part1>
+        <div className="text-xl mb-1 tracking-wider w-full text-center opacity-80">
+        Our Mission
+        </div>
+        <div className="text-base tracking-wide w-full text-center opacity-80">
+          Striving to make a change for the betterment of humanity<br></br> through the extensive use of technology to mimic human intelligence.
+
+        </div>
+       </div>
        
        {/* <div className="snap-center h-full"><Part2></Part2></div> */}
      </div>
 
-     <div className="block md:hidden my-auto h-full snap-y snap-mandatory ">
-       <div className="snap-center h-full"><PartSM1></PartSM1></div>
-       <div className="snap-center h-full"><PartSM2></PartSM2></div>
+     <div className="block md:hidden my-auto h-full snnap-mandatory ">
+       <div className=""><PartSM1></PartSM1></div>
+       {/* <div className=""><PartSM2></PartSM2></div> */}
        {/* <div className="snap-center h-full"><PartSM3></PartSM3></div>
        <div className="snap-center h-full"><PartSM4></PartSM4></div> */}
      </div>
@@ -29,14 +38,14 @@ export default function About(){
 
 function ProjectList({projects}){
   return(
-    <div className="bg-green500 w-full bordert-2 border-gray-100/70 pt-5  text-gry-700 mt-3 text-xs font-sans text- bg-red400   trackin">
-      <Opacity initial={0} final={1} duration={1/3} delay={2.5}>
+    <div className="bg-green500 flex flex-center items-center justify-center  w-full bordert-2 border-gray-100/70 pt-5  text-gry-700 mt-3 text-xs font-sans text- bg-red400   trackin">
+      <Opacity initial={0} final={1} duration={1/3} delay={1}>
     
         { projects.map(i=>( 
           
-          <Link key={i} href="/latest"><a>
+          <Link key={i} href="/projects"><a>
             
-            <p  className="inline-block py-1 px-2 m-1 hover:bg-gray-100/20 tracking  text-gray-100 text-base bg-gray-100/10 rounded-sm ">{i.title}</p> 
+            <p  className="inline-block  my-1 mr-1 hover:bg-gray-100/20 tracking  text-gray-100 text-base bg-gra100/10 rounded-sm ">{i.title} }</p> 
           </a></Link>
         
         )) }
@@ -49,23 +58,29 @@ function ProjectList({projects}){
 
 function PartSM1(){
   return(
-    <div className="bg-red-0 h-full flex flex-col md:flex-row mt-28 ">
-      <div className="w-full mt-10 md:w-1/2 opacity-70 flex flex-col items-center justify-center space-y-2 my-auto  h-full">
-        <Roboat></Roboat>
-        <div className="text-xs tracking-wider">Our Eye&apos;s on</div>
-        <div className="text-2xl tracking-wider text-center border-b-2 border-gray-100/40 pb-2">Autonomous <p>Vehicles</p>  Autonomous Systems</div>
-        <div className="text-xs">Since 2016</div>
-      </div>
+    <div className="relative w-full h-screen flex flex-col item-center justify-center">
+        <img src="/autozlogo.png" className="h-[70px] opacity-90 object-cover w-5/6 mx-auto mb-10"></img>
+        {/* <div className="text-3xl mb-3 pb-5 tracking-wider opacity-80 border-b-2 border-gray-100/40 text-gray-50  text-center  pb-2">Automating <p>Vehicles   A to Z | AutoZ</p></div> */}
+        <div className="tracking-wide text-xl px-3 opacity-75 text-center">   
+        We work on developing autonomous vehicles and automated systems. Our team comprises a diverse set of people having prior experience in industrial projects. Striving to make a change for the betterment of humanity through the extensive use of technology to mimic human intelligence.
+        <div><ProjectList projects={projects}></ProjectList></div>
+
+        </div>
+        
+        {/* <div className="text-xl text-center px-10">    </div> */}
     </div>
   );
 }
 function PartSM2(){
   return(
     <div className="bg-red-0 h-full flex flex-col md:flex-row pt- my-auto  ">
-      <div className="w-full  my-auto">
-          <div className="h-full w-full text-lg px-10 text-center my-auto bordel-2 text-gray-100/70 py-20 font-sans flex flex-col items-center justify-center ">
-            Team AutoZ <br></br> is a research & development team driven by undergraduate students of VIT Vellore. Since our infancy we are working on developing autonomous vehicles and automated systems. Our team comprises a diverse set of people having prior experience in industrial projects. 
+      <div className="w-full  my-auto flex flex-col items-center justify-center">
+          <div className="h-full w-full text-lg px-10 text-ellipsis my-auto bordel-2 text-gray-100/70 pt-20 font-sans flex flex-col items-center justify-center ">
+            <strong>Team AutoZ</strong>  is a research & development team driven by undergraduate students of VIT Vellore. Since our infancy we are working on developing autonomous vehicles and automated systems. Our team comprises a diverse set of people having prior experience in industrial projects. 
+            Our Mission is To design and develop products in solving real world use cases, and to work with companies that are keen at trying to bring automation into the market.
           </div>
+
+          <div className="w-full mx-auto bged-400 "><ProjectList projects={projects}></ProjectList></div>
       </div>
     </div>
   );
@@ -110,39 +125,50 @@ function PartSM4(){
 
 function Part1(){
   return(
-    <div className="bg-red-4 h-full flex flex-col md:flex-row pt- ">
-      <div className="w-full pt-10 md:w-1/2 opacity-60 flex flex-col items-center justify-center space-y-2 my-auto  h-full">
+    <div className="bg-red-4 h flex flex-col md:flex-row  ">
+      <div className="w-full bg-red300 pt-10 pr-4 md:w-1/2 opacity-80 flex flex-col items-end bg-red400 justify-center space-y-2 my-auto  h-full">
          <Opacity initial={0} final={1} duration={1/3} delay={1}>
 
-        <Roboat></Roboat>
+        {/* <Roboat></Roboat>
+         */}
+         <img src="/autozlogo.png" className="h-[70px]"></img>
          </Opacity>
         <Opacity initial={0} final={1} duration={1/3} delay={1.1}>
 
-        <div className="text-xs tracking-wider">Our Eye&apos;s on</div>
+        {/* <div className="text-xs tracking-wider">Our Eye&apos;s on</div> */}
         </Opacity>
         <Opacity initial={0} final={1} duration={1/3} delay={1.2}>
 
-        <div className="text-2xl tracking-wider text-center border-b-2 border-gray-100/40 pb-2">Autonomous <p>Vehicles</p>  Autonomous Systems</div>
+        <div className="text-2xl tracking-wider border-b-2 border-gray-100/40 text-gray-50  text-right  pb-2">Automating <p>Vehicles   A to Z | AutoZ</p></div>
         </Opacity>
         <Opacity initial={0} final={1} duration={1/3} delay={1.3}>
 
-        <div className="text-xs">Since 2016</div>
+        {/* <div className="text-lg text-center px-44 font-medium">Our Vision Since 2016  </div>
+        <div className="text-lg text-center px-56">
+                  
+Striving to make a change for the betterment of humanity through the extensive use of technology to mimic human intelligence.
+
+        </div> */}
+
+
         </Opacity>
       </div>
-        <div className="h-full w-auto">
+        {/* <div className="h-full w-auto">
          <Opacity initial={0} final={1} duration={1/3} delay={1.3}>
           <Y initial={"10px"} final={"0px"} duration={1/2} delay={1.3} >
             <div className="w-[1px] h-[400px] mt-32 bg-gray-50/50 my-auto"></div>
           </Y>
          </Opacity>  
-        </div>
+        </div> */}
 
-      <div className="w-1/2 ">
+      <div className="w-1/2 pl-4 bg-red500 h-5/6 my-auto opacit">
           {/* <Opacity className="w-full h-full" initial={0} final={1} duration={1/3} delay={2.3}> */}
-          <div className="h-full w-1/2 mx-auto text-xl px- text-center m  my-auto bordel-2 text-gray-100/70 py-20 font-sans flex flex-col items-left  justify-center ">
+          <div className="h-full w-1/2  text-xl px- text-left m  my-auto bordel-2 text-gray-100/70 py-20 font-sans flex flex-col items-start  justify-center ">
            <Opacity initial={0} final={1} duration={1/3} delay={1.4}>
-            AutoZ  is a <br></br> research & development team <br></br>driven by undergraduate students of VIT Vellore. Since our infancy we are working on developing autonomous vehicles and automated systems. Our team comprises a diverse set of people having prior experience in industrial projects. 
-           </Opacity>
+            We work on developing autonomous vehicles and automated systems. Our team comprises a diverse set of people having prior experience in industrial projects. 
+<br></br>
+
+          </Opacity>
             {/* AutoZ <br></br> is a research & development team<br></br> driven by undergraduate students of VIT Vellore.<br></br> Since our infancy we are working on developing autonomous vehicles and<br></br> automated systems. Our team comprises a diverse set of people having prior experience in industrial projects.  */}
             <div><ProjectList projects={projects}></ProjectList></div>
           </div>

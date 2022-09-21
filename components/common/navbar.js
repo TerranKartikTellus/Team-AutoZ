@@ -59,11 +59,11 @@ function PSMhome({route}){
     <div className="bg-green500 text-gray-100/50 w-3/5 flex flex-col items-center justify-evenly">
      
   <Opacity initial={0} final={1} delay={4.5} duration={0.3}>
-<Link href={"/latest"}>
+<Link href={"/projects"}>
         <a onClick={()=>{document.getElementById("navv").blur();}}
-        className={route==="/latest" ? "group font font-sans relative tracking-wider  font-semi scale-95 opacity-80  text-gray-100 font-nor " : "relative opacity-50 hover:opacity-80 transition-all duration-300 ease-in-out group scale-95 text-blue-100 font-normal  font font-sans tracking-wide"}
+        className={route==="/projects" ? "group font font-sans relative tracking-wider  font-semi scale-95 opacity-80  text-gray-100 font-nor " : "relative opacity-50 hover:opacity-80 transition-all duration-300 ease-in-out group scale-95 text-blue-100 font-normal  font font-sans tracking-wide"}
         >
-         LATEST
+         PROJECTS
           </a></Link>
     </Opacity>
   <Opacity initial={0} final={1} delay={4.2} duration={0.3}>
@@ -126,11 +126,11 @@ function PSM({route}){
     <div id="nevv" className="backdrop-blur-sm bg-white shadow-xl shadow-slate-200/20 drop-shadow-2xl rounded-lg p-3   text-gray-900 w-full mx-auto flex flex-col items-center justify-evenly">
      
 
-<Link href={"/latest"}>
+<Link href={"/projects"}>
         <a onClick={()=>{document.getElementById("navv").blur();}}
-        className={route==="/latest" ? "group font font-sans relative tracking-wider  text-gray-900  font-semi scale-95 opacity-100 font-semibold  font-nor " : "relative opacity-90 hover:opacity-80 transition-all duration-300 ease-in-out group scale-95 text-gray-900 text-blu0 font-normal  font font-sans tracking-wide"}
+        className={route==="/projects" ? "group font font-sans relative tracking-wider  text-gray-900  font-semi scale-95 opacity-100 font-semibold  font-nor " : "relative opacity-90 hover:opacity-80 transition-all duration-300 ease-in-out group scale-95 text-gray-900 text-blu0 font-normal  font font-sans tracking-wide"}
         >
-         LATEST
+         PROJECTS
           </a></Link>
 
 <Link href={"/about"}>
@@ -188,11 +188,11 @@ function List({route}){
     <div className="bg-green500 text-gray-100/50 w-[700px] flex flex-row items-center justify-around ">
      
   <Opacity initial={0} final={1} delay={2.2} duration={0.5}>
-<Link href={"/latest"}>
+<Link href={"/projects"}>
         <a 
-        className={route==="/latest" ? "group font font-sans relative tracking-wider  font-semi scale-95 opacity-80  text-gray-100 font-nor " : "relative opacity-50 hover:opacity-80 transition-all duration-300 ease-in-out group scale-95 text-blue-100 font-normal  font font-sans tracking-wide"}
+        className={route==="/projects" ? "group font font-sans relative tracking-wider  font-semi scale-95 opacity-80  text-gray-100 font-nor " : "relative opacity-50 hover:opacity-80 transition-all duration-300 ease-in-out group scale-95 text-blue-100 font-normal  font font-sans tracking-wide"}
         >
-         LATEST
+         PROJECTS
           </a></Link>
           </Opacity>
           

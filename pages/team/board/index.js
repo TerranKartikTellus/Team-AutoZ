@@ -54,7 +54,7 @@ export default function Team(){
           
           ))}
           </div>
-            <div className="w-full text-3xl bg-gray50/30 p-2">Ex-Board Members</div>
+            {/* <div className="w-full text-3xl bg-gray50/30 p-2">Ex-Board Members</div>
             <div  className="pt-[200px] md:pt-0 w-full grid grid-col-1 md:grid-cols-3  overflow-x-auto md: ">
           {xboard.map((i,index)=>(
             
@@ -72,7 +72,7 @@ export default function Team(){
             </div>
           
           ))}
-          </div>
+          </div> */}
 
           
           

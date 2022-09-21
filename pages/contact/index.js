@@ -41,7 +41,7 @@ function Icon(){
       
       <div className="text-4xl hidden md:block">Get in touch with us</div>
       <div className="text-base bg-red400 px-20 k hidden md:block">Always good to hear from you, We are always looking for opportunities</div>
-      {/* <div className="text-sm">We are always looking for opportunities</div> */}
+      {/* <div className="text-base">We are always looking for opportunities</div> */}
 <div className="w-full h-full ">
 
 <Form></Form>
@@ -147,7 +147,7 @@ function SentFailed(){
           );         
 }
   return(
-     <div className=" lg:w-[300px] lg:h-96 h-5/6 lg:p-5 lg:rounded-sm py-5 md:py-0 mx-auto text-left  mt-3 w-full flex flex-col items-center justify-center lg:mt-0  bg-gray-50 rounded-sm hover:shadow-2xl transition-all duration-300 ease-in-out hover:tracking-widest bg-red ">
+     <div className=" lg:w-[370px] lg:h-96 h-5/6 lg:p-5 lg:rounded-sm py-5 md:py-0 mx-auto text-left  mt-3 w-full flex flex-col items-center justify-center lg:mt-0  bg-gray-50 rounded-sm hover:shadow-2xl transition-all duration-300 ease-in-out tracking-widest bg-red ">
                                                <div className="pb-5 lg:hidden">
       <svg className="fill-gray-900 w-32 h-32 mx-auto " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm22 16l-6.526-6.618-3.445 3.483-3.418-3.525-6.611 6.66 5.051-8-5.051-6 10.029 7.446 9.971-7.446-4.998 6.01 4.998 7.99z"/></svg>
        <div className="text-base bg-red400 px-20 k text-gray-900 text-center">Always good to hear from you, We are always looking for opportunities</div>
@@ -159,7 +159,7 @@ function SentFailed(){
                                                                        <label htmlFor="name"> Name <span className="bg-red-600 text-white">{alertN}</span></label>
                                                                     </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                       <input onChange={(e)=>{onChangeName(e)}} className="first-letter:capitalize w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-sm font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Norbert Wiene" autoComplete="off" id="nameId" name="name" type={"text"}></input>
+                                                                       <input onChange={(e)=>{onChangeName(e)}} className="first-letter:capitalize w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Norbert Wiene" autoComplete="off" id="nameId" name="name" type={"text"}></input>
                                                                     </div>
                                                           </div>
 
@@ -169,7 +169,7 @@ function SentFailed(){
                                                                        
                                                                       </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                     <input onChange={(e)=>{onChangeEmail(e) }} className="w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-sm font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="norbertwiene@email.com" autoComplete="off" id="emailId" name="name" type={"email"}></input>
+                                                                     <input onChange={(e)=>{onChangeEmail(e) }} className="w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="norbertwiene@email.com" autoComplete="off" id="emailId" name="name" type={"email"}></input>
                                                                      
                                                                     </div>
                                                           </div>
@@ -179,7 +179,7 @@ function SentFailed(){
                                                                        <label htmlFor="name">Message <span className="text-right bg-red-600 text-white">{alertM}</span></label>
                                                                       </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                        <textarea onChange={ (e)=>onChangeMessage(e) } className="w-full h-24 px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-sm font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Hello AutoZ | We are Looking forward to " autoComplete="off" id="messageId" name="name" type={"text"}></textarea>
+                                                                        <textarea onChange={ (e)=>onChangeMessage(e) } className="w-full h-24 px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Hello AutoZ | We are Looking forward to " autoComplete="off" id="messageId" name="name" type={"text"}></textarea>
                                                                       
                                                                      </div>
                                                           </div>

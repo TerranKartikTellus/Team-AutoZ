@@ -5,20 +5,38 @@ import  Y from "/components/Animate/WhenInView/Translate/y"
 import Opacity from "/components/Animate/WhenInView/Opacity"
 import {motion} from "framer-motion"
 import Link from "next/link";
-
+const role = [
+    {
+      title: "Financial Assistance",
+      ico: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 7h-19v11h-1v-12h20v1zm-2-2h-19v11h-1v-12h20v1zm-6 6c-1.656 0-3 1.344-3 3s1.344 3 3 3 3-1.344 3-3-1.344-3-3-3zm.15 4.484v.315h-.3v-.299c-.311-.005-.632-.079-.898-.217l.135-.493c.287.11.669.229.968.162.345-.078.415-.433.034-.604-.279-.129-1.133-.242-1.133-.973 0-.409.312-.775.895-.855v-.319h.301v.305c.217.006.461.043.732.126l-.108.493c-.23-.08-.485-.154-.733-.139-.446.026-.486.413-.174.575.514.242 1.182.42 1.182 1.063 0 .516-.404.791-.901.86zm-10.15-7.484v12h20v-12h-20zm18 8.018c-.959.42-1.395 1.022-1.814 1.982h-12.372c-.419-.959-.855-1.562-1.814-1.982v-4.036c.959-.42 1.395-1.022 1.814-1.982h12.371c.42.959.855 1.562 1.814 1.982v4.036z"/></svg>`,
+      desc: "Finance is the lifeline of any project. We welcome sponsorship of any amount which will help this initiative to be successfully completed."
+    },
+    {
+      title: "Technical Guidance",
+      desc: "The success of this project is dependent on the technical know-how which is often not available in academic circles. Your contribution on this front will be invaluable."
+    },
+    {
+      title: "Parts Sponsorship",
+      desc: "The completion of our autonomous bot and upcoming project is dependent on the availability of special parts that are rarely available in the open market."
+    },
+    {
+      title: "Industrial Contacts",
+      desc: "Sometimes, getting in touch with the right people is more important for taking the project ahead."
+    },
+  ]
 export default function Sponsor(){
   return(
     <main className="bg-gra rounded-sm text-gray-100  bg-gray-900/5  snap-y snap-mandatory h-screen overflow-x-hidden  select-none">
          <HeadTag title="Sponsor | AutoZ" cardTitle="Sponsor | AutoZ" description="Sponsor | AutoZ" image="" ></HeadTag>
-         <Top main={"Sponsor"} sub="AutoZ" mini={""}></Top>
+         <Top main={"Sponsor's"} sub="" mini={""}></Top>
 
          <div className="block md:hidden my-auto h-full snap-y snap-mandatory ">
+           <div className="snap-center h-full scale-105"><Part2></Part2></div>
            <motion.div layoutId='layout2' className="snap-center h-full"><Part1></Part1></motion.div>
-           <div className="snap-center h-full"><Part2></Part2></div>
          </div>
 
-         <div className="hidden md:block my-auto h-full snap-y snap-mandatory ">
-           <div className="snap-center h-full"><Part1></Part1></div>
+         <div className="hidden md:block my-auto h-full ">
+           <div className=" h-full"><Part1></Part1></div>
            
          </div>
          
@@ -38,76 +56,70 @@ function HandShake(){
   );
 }
 function Part1(){
+  
   return(
-    <div className="w-full flex flex-col items-center md:flex-row justify-center h-full bg-red400 px-10">
+    <div className="w-full flex flex-col items-center md:flex-col justify-center h-full bg-red400 px-10">
         <div className="flex flex-col items-center md:w-1/2 justify-center space-y-3">
-          <HandShake></HandShake>
-           <Opacity initial={0} final={1} duration={1/3} delay={1}>
-           <div className="opacity-70 text-xs tracking-wider">Our Support</div>
-           </Opacity>
-           <Opacity initial={0} final={1} duration={1/3} delay={1.1}>
-           <div className="opacity-70 text-2xl tracking-wider text-center border-b-2 border-gray-100/40 pb-2">Greatly appreciate <p> generous contributions </p> </div>
-           </Opacity>
-           <Opacity initial={0} final={1} duration={1/3} delay={1.1}>
-           <div className="opacity-70 text-xs">Since 2016</div>
-           </Opacity>
-      
-          {/* <div  className="text-center opacity-70 md:w-8/12">Thank you so much for your generous contribution throughout the years. We greatly appreciate your support to our organization</div> */}
+          {/* <HandShake></HandShake> */}
+           
+      <div className="hidden fixed bottom-10 mx-auto  g-red-300 md:block md:w-full opacity-75">
+         
+        <div className="flex  mx-auto left-auto right-auto  flex-row items-center justify-evenly w-5/6 mx-auto bg-gray-50">
+         <div className="text-center text-black text-xs "><Link href="https://www.ansys.com/en-in"><a><img className=" contrast-150 w-full h-16  object-cover" src="/img/sponsors/ansys.png"></img></a></Link></div>
+         <div className="text-center text-black text-xs "><Link href="https://www.pcbpower.com/"><a><img className=" contrast-150  w-full h-16 object-cover" src="/img/sponsors/pcb.png"></img></a></Link></div>
+         <div  className="text-center text-black text-xs "><Link href="https://www.solidworks.com/"><a><img className=" contrast-150 w-full h-16  object-cover" src="/img/sponsors/port 3.png"></img></a></Link></div>
+         <div  className="text-center text-black text-xs "><Link href="https://www.xsens.com/"><a><img className=" contrast-150 w-full h-16 pb object-cover" src="/img/sponsors/port1.png"></img></a></Link></div>
+         <div  className="text-center text-black text-xs "><Link href="https://www.tdk.com/en/index.html"><a><img className=" contrast-150 w-full h-16  object-cover" src="/img/sponsors/TDK.png"></img></a></Link> </div>
+         <div  className="text-center text-black text-xs mt-5 mb-2 "><Link href="https://www.mathworks.com/"><a><img className=" contrast-150 w-full h-16 r" src="/img/sponsors/matlab.svg"></img></a></Link></div>
         </div>
-    <Opacity initial={0} final={1} duration={1/3} delay={1.3}>  
-    <Y initial={'-60px'} final={'0px'} duration={1/3} delay={1.3}>
+                    <div className="mx-auto bg-gr500 text-center flex flex-row items-center justify-center text-gray-900 w-5/6 bg-gray-50">              View Sponsorship Brochure  <Link  href="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/Team%20AutoZ%20Sponsorship%20Brochure%202022-23.pdf?alt=media&token=8c7cd748-06b8-441e-b8a5-47183644ff9e"><a target="_blank" className="underline">here</a></Link></div>
 
-      <div className="w-[1px] h-[400px] bg-gray-50/50 my-auto hidden md:block"></div>
-    </Y>
-    </Opacity>  
-      <div className="hidden mx-auto  g-red-300 md:block md:w-1/2 opacity-75">
-          <div className="  flex flex-col items-center justify-center h-full  bg-red400 px-10 mx-auto md:max-w-md">
-       <Opacity initial={0} final={1} duration={1/3} delay={1.3}>
-        <X initial={'60px'} final={'0px'} duration={1/3} delay={2}>
-       <div className="bg-gray-100/90 rounded p-10 my-auto ">
-        <Opacity initial={0} final={1} duration={1/3} delay={2}>
-        <div className="flex flex-row items-center justify-center">
-         <div className="text-center text-black text-xs "><Link href="https://www.ansys.com/en-in"><a><img className=" contrast-150   object-cover" src="/img/sponsors/ansys.png"></img></a></Link></div>
-         <div className="text-center text-black text-xs "><Link href="https://www.pcbpower.com/"><a><img className=" contrast-150   object-cover" src="/img/sponsors/pcb.png"></img></a></Link></div>
-        </div> 
+    </div>
+   
+      
+    <Opacity initial={0} final={1} duration={1/3} delay={0.5}>
+           <div className="h-full flex flex-col items-center justify-center">
+
+           <div className="opacity- text-2xl tracking-wider bg-red500 mt-20  text-center y-100/40 pb-2 bged-400 md:border-b-2 md:border-gray-100/70 mb-3">
+            <div className="block md:hidden"><p>Role of Sponsorships </p>in our success </div><div className="hidden md:block">Role of Sponsorships in our success </div>
+            </div>
+           <div className="h-[460px] ">
+            {role.map(i=>(
+              <div key={i} className=" my-1 transition-all duration-500 group ease-in-out">
+                <div className="text-xl text-center tracking-wider opacity-90 bg-red400 w">{i.title}</div>
+                <div className="text-center opacity-70">{i.desc}</div>
+              </div>
+            ))}
+           </div>
+{/* <div className="text-base  tracking-widest text-blue-100/80 text md:text-left mx-auto md:mx-0 w-[300px] text-center bg-red300 font-normal "> 
+    
+</div> */}
+            </div>
         </Opacity>
 
-        <Opacity initial={0} final={1} duration={1/3} delay={3}>
-        <div className="flex flex-row items-center justify-center">
-         <div  className="text-center text-black text-xs "><Link href="https://www.solidworks.com/"><a><img className=" contrast-150   object-cover" src="/img/sponsors/port 3.png"></img></a></Link></div>
-         <div  className="text-center text-black text-xs "><Link href="https://www.xsens.com/"><a><img className=" contrast-150  pb object-cover" src="/img/sponsors/port1.png"></img></a></Link></div>
-        </div> 
-        </Opacity>
+       
+   
 
-        <Opacity initial={0} final={1} duration={1/3} delay={3}>
-
-        <div className="flex flex-row items-center justify-center">
-         <div  className="text-center text-black text-xs "><Link href="https://www.tdk.com/en/index.html"><a><img className=" contrast-150   object-cover" src="/img/sponsors/TDK.png"></img></a></Link> </div>
-        </div> 
-        </Opacity>
-         <Opacity initial={0} final={1} duration={1/3} delay={3}>
-         <div  className="text-center text-black text-xs mt-5 mb-2 "><Link href="https://www.mathworks.com/"><a><img className=" contrast-150 w-full h-16  r" src="/img/sponsors/matlab.svg"></img></a></Link></div>
-         </Opacity>
+      
         
 
         {/* <div className="text-center text-lg font-sans tracking-wider text-black">Since 2016</div> */}
        </div>
-        </X>
-       </Opacity>
-    </div>
-        </div>
-    </div>
+     </div>
+      
   );
 }
 
 function Part2(){
+  
   return(
     <div className="  flex flex-col items-center justify-center h-full  bg-red400 px-10 md:max-w-md">
-       <div className="bg-gray-100/90 rounded p-10 my-auto ">
+       <div className="text-xl tracking-widest text-blue-100/80 text md:text-left mx-auto md:mx-0 w-[300px] text-center bg-red300 font-normal mb-5">We Greatly appreciate your generous contributions </div>
+       <div className="bg-gray-100/90 rounded p-10 my- ">
 
-       <div className="flex flex-row items-center justify-center">
-        <div className="text-center text-black text-xs "><img className="  object-cover" src="/img/sponsors/ansys.png"></img></div>
-        <div className="text-center text-black text-xs "><img className="  object-cover" src="/img/sponsors/pcb.png"></img></div>
+       <div className="flex flex-row items-center w-full justify-center">
+        <div className="text-center text-black text-xs w-1/2"><img className="w-full  object-cover" src="/img/sponsors/ansys.png"></img></div>
+        <div className="text-center text-black text-xs w-1/2"><img className="  object-cover" src="/img/sponsors/pcb.png"></img></div>
        </div> 
        <div className="flex flex-row items-center justify-center">
         <div  className="text-center text-black text-xs "><img className="  object-cover" src="/img/sponsors/port 3.png"></img></div>
@@ -121,6 +133,11 @@ function Part2(){
 
         {/* <div className="text-center text-lg font-sans tracking-wider text-black">Since 2016</div> */}
        </div>
+<div className="text-base mt-5 tracking-widest text-blue-100/80 text md:text-left mx-auto md:mx-0 w-[300px] text-center bg-red300 font-normal "> 
+    View Sponsorship Brochure <Link href="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/Team%20AutoZ%20Sponsorship%20Brochure%202022-23.pdf?alt=media&token=8c7cd748-06b8-441e-b8a5-47183644ff9e"><a target="_blank" className="underline">here</a></Link>
+</div>
+       
+        
     </div>
   );
 }
