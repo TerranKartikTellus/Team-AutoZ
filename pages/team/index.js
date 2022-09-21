@@ -23,7 +23,7 @@ export default function Team(){
      <div className="block md:hidden my-auto h-full snap-y snap-mandatory ">
        
        <div className="snap-center h-full"><PartSM3></PartSM3></div>
-       <div className="snap-center h-full"><PartSM4></PartSM4></div>
+       {/* <div className="snap-center h-full"><PartSM4></PartSM4></div> */}
      </div>
     </main>
   );
@@ -32,17 +32,31 @@ export default function Team(){
 function PartSM3(){
  const [team,setteam]= useState(false);
   return(
-    <div className="bg-red-4 h-full flex flex-row">
+    <div className="relative bg-red-4 h-full rounded-sm flex flex-row group">
+      <div className="opacity-0 translate-x-full group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out absolute top-auto left-auto w-full bg-red-4 h-full flex flex-row my-auto">
+      
+      <div className="w-full  flex flex-col items-center justify-center space-y-2">
+          <div className="flex flex-row items-center justify-center space-x-2">
+            <Link href="/team/advisors"><a className="w-32 h-32 bg-gray-100/70 flex flex-row items-center justify-center text-gray-900 text-lg tracking-wider hover:opacity-20 text-center">Advisors</a></Link>
+            <Link href="/team/board"><a className="w-32 h-32 bg-gray-100/70 flex flex-row items-center justify-center text-gray-900 text-lg tracking-wider hover:opacity-20 text-center">Board Members  </a></Link>
+          </div>
+
+           <div className="flex flex-row items-center justify-center space-x-2">
+            <Link href="/team/core"><a className="w-32 h-32 text-center bg-gray-100/70 flex flex-row items-center justify-center text-gray-900 text-lg tracking-wider hover:opacity-20 ">Core Committee Members</a></Link>
+            <Link href="/team/alumni"><a className="w-32 h-32 bg-gray-100/70 flex flex-row items-center justify-center text-gray-900 text-lg tracking-wider hover:opacity-20 text-center">Alumni</a></Link>
+          </div>
+      </div>
+    </div>
       <div className="w-full opaci relative -z-10 flex flex-col items-center justify-center space-y-2 my-auto  h-full">
          <img src="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/team%2FautoZteam%20(1).jpg?alt=media&token=6cc37fea-4ab1-4766-8ca1-2cd8c04ec996"
               className="object-cover contrast-125 h-full mx-auto my-auto w-full  mx-auto"
               layout='fixed'
               alt=""
             ></img>
-            <div className="bg-black/20 absolute -top-2 left-0 w-full h-full">v</div>
-        <div className="absolute bottom-10 ">
+            <div className=" bg-black/40 absolute -top-2 left-0 w-full h-full text-transparent">v</div>
+        <div className="absolute  bottom-10 ">
         <div className=" text-3xl tracking-wider text-center border-b-2 border-gray-100/40 pb-2">Our enthusiastically <br></br>driven Team</div>
-          <div className=" flex flex-row items-center justify-center space-x-2 my-3">
+          <div className=" flex flex-row items-center justify-center space-x-2 my-3 z-50">
             <Link href="/team/advisors"><a className="opacity-90 text-base">Advisors</a></Link>
             <Link href="/team/board"><a    className="opacity-90 text-base">Board</a></Link>
             <Link href="/team/core"><a     className="opacity-90 text-base">Core</a></Link>
