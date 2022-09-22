@@ -24,9 +24,9 @@ function Show({projects}){
           <div key={i} className="z-30 h-screen snap-center flex flex-row justify-center items-center">
             <div className="w-5/12 flex flex-col items-center justify-center">
               <div className="w-full h-full mx-auto flex flex-row items-center relative justify-center border-b-2 border-gray-50/50">
-               <img className="grayscale  transition-all duration-700 opacity-90 w-[280px] h-[280px] opacity-100 hover:grayscale-0  border2 order-gray-50/60 object-cover rounded-sm absolute -translate-x-16" src={i.img1}></img> 
-               <img className="grayscale  transition-all duration-700 opacity-90 w-[180px] h-[180px] opacity-100 hover:grayscale-0  border2 order-gray-50 absolute translate-y-28 translate-x-24 object-cover rounded-sm" src={i.img2}></img>
-               <img className="grayscale  transition-all duration-700 opacity-80 w-[200px] h-[200px] opacity-100 hover:grayscale-0  border2 order-gray-50/80 absolute -translate-y-32 translate-x-20 object-cover rounded-sm" src={i.img3}></img>
+               <img className="z-50 hover:z-10 grays   transition-all duration-300 opacity-90 w-[280px] h-[280px] opacity-100 hover:grayscale-0  border2 order-gray-50/60 object-cover rounded-sm absolute -translate-x-16" src={i.img1}></img> 
+               <img className="z-10 hover:z-50 grayscale  transition-all duration-300 opacity-90 w-[180px] h-[180px] opacity-100 hover:grayscale-0  border2 order-gray-50 absolute translate-y-28 translate-x-24 object-cover rounded-sm" src={i.img2}></img>
+               <img className="z-10 hover:z-50 grayscale  transition-all duration-300 opacity-80 w-[200px] h-[200px] opacity-100 hover:grayscale-0  border2 order-gray-50/80 absolute -translate-y-32 translate-x-20 object-cover rounded-sm" src={i.img3}></img>
               </div>
             </div>
             <div className="w-[100px]  h-full  flex flex-col items-center justify-center">
@@ -76,7 +76,7 @@ function ShowSm({projects}){
             <div className="text-transparent h-[40px] bg-red">.</div>
             <div className="h-auto flex flex-col items-center justify-center">
               <div className="w-full h-auto mx-auto  relative ">
-               <img className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out opacity- shadow-lg abso shadow-blue-800/20 w-[260px] h-[260px] rder-2 border-gray- object-cover rounded " src={i.img1}></img> 
+               <img className=" hover:grayscale-0 transition-all duration-500 ease-in-out opacity- shadow-lg abso shadow-blue-800/20 w-[260px] h-[260px] rder-2 border-gray- object-cover rounded " src={i.img1}></img> 
                {/* <img className=" opacity- shadow-lg shadow-blue-800/20 w-[160px] h-[160px] rder-2 border-gray- object-cover rounded-full" src={i.img}></img> */}
                 {/* <div className="absolute -top-5 right-0"><Link href="/"><a className=" text-center mx-auto opacity-60 text-base w-full bg-red400">Repository</a></Link></div>  */}
             
