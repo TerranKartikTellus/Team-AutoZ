@@ -45,9 +45,8 @@ export default function Team(){
             <div key={index} className="hover:w-64 mx-auto transition-all duration-500 ease-in-out group   px-4 md:pb-5  w-[300px] md:w-60 bgred-400"> 
               <div className="my-5 mx-auto  relative ">
                {i.img &&  <img src={i.img} className="w-full h-80 opacity-90 object-cover rounded-md shadow-lg "></img>}
-                {!i.img && <svg className="w-full h-80 opacity-90 object-cover rounded-md shadow-lg invert" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.641-1.49-5.09-4.418 4.719-8.912 1.251-13.678-3.732-13.678-5.081 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-2.979.688-3.178 2.143-3.178 4.663l.005 1.241h10.483l.704-3h1.615l.704 3h10.483l.005-1.241c.001-2.52-.198-3.975-3.177-4.663zm-8.231 1.904h-1.164l-.91-2h2.994l-.92 2z"/></svg> }
-                
-                {i.year && <div className="absolute top-0 right-auto w-full bg-gray   pr-1"><div className="text-gray-900 w-[95px] mx-auto bg-red500 ">{i.year} - {i.endYear}</div></div>}
+               {!i.img && <svg className="w-full h-80 opacity-90 object-cover rounded-md shadow-lg invert" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.641-1.49-5.09-4.418 4.719-8.912 1.251-13.678-3.732-13.678-5.081 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-2.979.688-3.178 2.143-3.178 4.663l.005 1.241h10.483l.704-3h1.615l.704 3h10.483l.005-1.241c.001-2.52-.198-3.975-3.177-4.663zm-8.231 1.904h-1.164l-.91-2h2.994l-.92 2z"/></svg> }
+               {i.year && <div className="absolute top-0 right-auto w-full bg-gray   pr-1"><div className="text-gray-900 w-[95px] mx-auto bg-red500 ">{i.year} - {i.endYear}</div></div>}
                 <div className="absolute top-0 pr-2 left-0 w-full h-full bg-black/20 flex flex-col items-end justify-end">
                   <div className="flex flex-row items-center justify-center space-x-1 scale-75">
                      <Social google={i.email} linkdin={i.linkdin} insta={i.insta}></Social>

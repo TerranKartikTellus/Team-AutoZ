@@ -77,9 +77,9 @@ function Show({arr,toggleView,toggleViewImage}){
                 {
                   arr[2]!=null && <div onClick={()=>{ toggleView(); toggleViewImage(arr[2].img) }} className="w-full p-1 md:p-2  relative group ">
                   <div className="w-full text-white flex flex-col items-center justify-center z-50 h-[334px]   absolute rounded-lg top-0 left-0 opacity-0 group-hover:opacity-90 translate-x-6 group-hover:translate-x-0 duration-300 ease-in-out transition-all">
-                    <div className="w-full text-center  text-lg">Head</div>
+                    {/* <div className="w-full text-center  text-lg">Head</div>
                     <div className="w-full text-center  text-base">About</div>
-                    <div className="w-full text-center  text-sm">More</div>
+                    <div className="w-full text-center  text-sm">More</div> */}
                   </div>
                   <img    alt="gallery" className="block object-cover object-center w-full h-full rounded-lg h-[334px]  graysca   "
                    src={arr[2].img} />
@@ -90,9 +90,7 @@ function Show({arr,toggleView,toggleViewImage}){
                 {
                   arr[3]!=null && <div onClick={()=>{ toggleView(); toggleViewImage(arr[3].img) }} className="w-full p-1 md:p-2  relative group ">
                   <div className="w-full text-white flex flex-col items-center justify-center z-50 h-[334px]   absolute rounded-lg top-0 left-0 opacity-0 group-hover:opacity-90 translate-x-6 group-hover:translate-x-0 duration-300 ease-in-out transition-all">
-                    <div className="w-full text-center  text-lg">Head</div>
-                    <div className="w-full text-center  text-base">About</div>
-                    <div className="w-full text-center  text-sm">More</div>
+                    {/* < className="w-full text-center  text-lg">Head< */}
                   </div>
                   <img    alt="gallery" className="  graysce  block object-cover object-center w-full h-full rounded-lg h-[334px]"
                    src={arr[3].img} />

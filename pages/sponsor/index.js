@@ -28,7 +28,7 @@ export default function Sponsor(){
   return(
     <main className="bg-gra rounded-sm text-gray-100  bg-gray-900/5  snap-y snap-mandatory h-screen overflow-x-hidden  select-none">
          <HeadTag title="Sponsor | AutoZ" cardTitle="Sponsor | AutoZ" description="Sponsor | AutoZ" image="" ></HeadTag>
-         <Top main={"Sponsor's"} sub="" mini={""}></Top>
+         <Top main={"Sponsors"} sub="" mini={""}></Top>
 
          <div className="block md:hidden my-auto h-full snap-y snap-mandatory ">
            <div className="snap-center h-full scale-105"><Part2></Part2></div>
