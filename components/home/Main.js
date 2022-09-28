@@ -54,6 +54,7 @@ function Right(){
     <div className="text-lg tracking-widest text-blue-100/90  text-center w-full bg-red-300font-normal">&apos;Autonomous Vehicles&apos;</div>
     </Opacity>
     {/* <div className="text-lg tracking-widest text-blue-100/80  text-center w-full bg-red-300font-normal">VIT Vellore</div> */}
+    <div className="text-base tracking-widest text-blue-100/90  text-center w-full bg-red-300font-normal">VIT, Vellore</div>
     
     <div className="pt-3"><SocialMedia></SocialMedia></div>
     
