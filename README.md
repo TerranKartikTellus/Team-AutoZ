@@ -1,4 +1,4 @@
-## About
+## Research and Development of Autonomous Vehicles
 Website for AutoZ Club at VIT, Vellore.
 
 
