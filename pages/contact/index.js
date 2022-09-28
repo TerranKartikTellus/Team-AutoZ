@@ -1,10 +1,11 @@
 import HeadTag from "../../components/common/head";
 import Top from "../../components/common/top";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import MSend from '/components/sendButton/send.js';
 import MSending from '/components/sendButton/sending.js';
 import MSendFailed from '/components/sendButton/sendFailed.js';
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
+
 import toast,{ Toaster } from "react-hot-toast";
 
 export default function Contact(){
@@ -61,7 +62,7 @@ const [sendSuccess , setMessage] = useState("");
   const [name,setName] = useState("");
   const [email,setEmail] = useState("");
   const [message,settMessage] = useState("");
-
+  const form = useRef();
  function onChangeName(e){
    var str = e.currentTarget.value;
    const arr = str.split(" ");
@@ -102,7 +103,7 @@ const [sendSuccess , setMessage] = useState("");
     else{
       setText(<Sending></Sending>);
       toast.loading('Sending...',{duration: 1000,});
-      emailjs.sendForm('service_oiclqyb','template_2d65l9w',e.target,'user_6EY8kBcjuR7TK22MvNRCS').then(res=>{
+      emailjs.sendForm('service_jhdwwkg','template_ka8xlxr',form.current,'g_PyZNM23g11IQdgx').then(res=>{
         // console.log("then: ",res); setMessage("true");
         setText(<SentSuccess></SentSuccess>);
         setName(document.getElementById("nameId").value);
@@ -153,13 +154,13 @@ function SentFailed(){
        <div className="text-base bg-red400 px-20 k text-gray-900 text-center">Always good to hear from you, We are always looking for opportunities</div>
      
       </div>
-                                                <form onSubmit={sendMail} className="w-10/12  flex flex-col items-center justify-center  space-y-3">
+                                                <form ref={form} onSubmit={sendMail} className="w-10/12  flex flex-col items-center justify-center  space-y-3">
                                                           <div className=" relative  w-full mx-auto scale-95 lg:scale-100">
                                                                     <div className="w-full absolute top-1  left-1 font-sans text-gray-500 text-xs">
                                                                        <label htmlFor="name"> Name <span className="bg-red-600 text-white">{alertN}</span></label>
                                                                     </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                       <input onChange={(e)=>{onChangeName(e)}} className="first-letter:capitalize w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Norbert Wiene" autoComplete="off" id="nameId" name="name" type={"text"}></input>
+                                                                       <input onChange={(e)=>{onChangeName(e)}} className="first-letter:capitalize w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Norbert Wiene" autoComplete="off" id="nameId" name="from_name" type={"text"}></input>
                                                                     </div>
                                                           </div>
 
@@ -169,7 +170,7 @@ function SentFailed(){
                                                                        
                                                                       </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                     <input onChange={(e)=>{onChangeEmail(e) }} className="w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="norbertwiene@email.com" autoComplete="off" id="emailId" name="name" type={"email"}></input>
+                                                                     <input onChange={(e)=>{onChangeEmail(e) }} className="w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="norbertwiene@email.com" autoComplete="off" id="emailId" name="from_email" type={"email"}></input>
                                                                      
                                                                     </div>
                                                           </div>
@@ -179,7 +180,7 @@ function SentFailed(){
                                                                        <label htmlFor="name">Message <span className="text-right bg-red-600 text-white">{alertM}</span></label>
                                                                       </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                        <textarea onChange={ (e)=>onChangeMessage(e) } className="w-full h-24 px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Hello AutoZ | We are Looking forward to " autoComplete="off" id="messageId" name="name" type={"text"}></textarea>
+                                                                        <textarea onChange={ (e)=>onChangeMessage(e) } className="w-full h-24 px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Hello AutoZ | We are Looking forward to " autoComplete="off" id="messageId" name="message" type={"text"}></textarea>
                                                                       
                                                                      </div>
                                                           </div>
