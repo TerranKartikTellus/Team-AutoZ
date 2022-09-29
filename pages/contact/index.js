@@ -160,7 +160,7 @@ function SentFailed(){
                                                                        <label htmlFor="name"> Name <span className="bg-red-600 text-white">{alertN}</span></label>
                                                                     </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                       <input onChange={(e)=>{onChangeName(e)}} className="first-letter:capitalize w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Norbert Wiene" autoComplete="off" id="nameId" name="from_name" type={"text"}></input>
+                                                                       <input onChange={(e)=>{onChangeName(e)}} className="first-letter:capitalize w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="" autoComplete="off" id="nameId" name="from_name" type={"text"}></input>
                                                                     </div>
                                                           </div>
 
@@ -170,7 +170,7 @@ function SentFailed(){
                                                                        
                                                                       </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                     <input onChange={(e)=>{onChangeEmail(e) }} className="w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="norbertwiene@email.com" autoComplete="off" id="emailId" name="from_email" type={"email"}></input>
+                                                                     <input onChange={(e)=>{onChangeEmail(e) }} className="w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="" autoComplete="off" id="emailId" name="from_email" type={"email"}></input>
                                                                      
                                                                     </div>
                                                           </div>
@@ -180,7 +180,7 @@ function SentFailed(){
                                                                        <label htmlFor="name">Message <span className="text-right bg-red-600 text-white">{alertM}</span></label>
                                                                       </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                        <textarea onChange={ (e)=>onChangeMessage(e) } className="w-full h-24 px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="Hello AutoZ | We are Looking forward to " autoComplete="off" id="messageId" name="message" type={"text"}></textarea>
+                                                                        <textarea onChange={ (e)=>onChangeMessage(e) } className="w-full h-24 px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="" autoComplete="off" id="messageId" name="message" type={"text"}></textarea>
                                                                       
                                                                      </div>
                                                           </div>
