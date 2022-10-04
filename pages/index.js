@@ -11,7 +11,7 @@ import HeadTag from '../components/common/head'
 export default function Home() {
   return (
     <div className="bg-gra rounded-sm text-gray-900  bg-gray-50/0  snap-y snap-mandatory h-screen overflow-x-hidden  select-none">
-      <HeadTag title="Home | AutoZ" cardTitle="Home | AutoZ" description="Home | AutoZ" image="" ></HeadTag>
+      <HeadTag title="Home | AutoZ" cardTitle="Home | AutoZ" description="Research and Development team, VIT Vellore" image="" ></HeadTag>
       
      <div className='h-screen snap-center saturat'><Main></Main></div>
      {/* <div className='h-screen snap-center'><About></About></div>
