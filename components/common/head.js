@@ -5,7 +5,7 @@ export default function HeadTag({
    title = 'AutoZ',
    cardTitle = 'AutoZ',
    description = 'Research and Development team',
-  image = '',
+  image = '\img\preview of home.jpg',
 }){
 
           return (
