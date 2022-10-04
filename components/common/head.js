@@ -11,7 +11,7 @@ export default function HeadTag({
           return (
                     <Head>
                       <meta charset="utf-8" />
-                      <meta name="Description" CONTENT={description} />
+                      <meta name="Description" content={description} />
                       <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34="/>
                       <title className="tracking-wider text-lg">{title}</title>
                       <meta name="robots" content="noindex,nofollow"></meta>
