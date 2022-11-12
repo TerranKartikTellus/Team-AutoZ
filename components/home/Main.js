@@ -4,22 +4,9 @@ import SocialMedia from "../common/SocialMedia";
 
 export default function Main(){
   return(
-    // <div className="h-screen pt-20 px-56 flex flex-row items-center justify-center space-x-2  mx-auto">  
-    //   <div className="flex bg-red-00 w-full flex-col items-start justify-center space-y-8 mx-auto">
-    //   <div><Middle></Middle></div>
-    //   <div><TagLine></TagLine></div>
-    //   <div><GetStarted></GetStarted></div>
-    //   </div>
-    //   <div className="bg-red-00 w-full">
-    //     <ImageGal></ImageGal>
-    //   </div>
-    // </div>
+
     <div className="flex  flex-row items-center justify-center w-full h-full space-x bg-gray-950">
-        {/* <div className=" flex flex-row items-center justify-center">
-        </div> */}
-        {/* <div className="w-1/2 flex flex-col items-end   justify-center h-full">
-          <Left></Left>
-        </div> */}
+        
         <div className="w-full flex flex-col items-center justify-center   h-full">
           <Right></Right>
         </div>
@@ -56,7 +43,7 @@ function Right(){
     {/* <div className="text-lg tracking-widest text-blue-100/80  text-center w-full bg-red-300font-normal">VIT Vellore</div> */}
     <div className="text-base tracking-widest text-blue-100/90  text-center w-full bg-red-300font-normal">VIT, Vellore</div>
     
-    <div className="pt-3"><SocialMedia></SocialMedia></div>
+    <div className="pt-3 scale-90 md:scale-100"><SocialMedia></SocialMedia></div>
     
     
     </div>

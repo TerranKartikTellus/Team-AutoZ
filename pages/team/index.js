@@ -12,7 +12,7 @@ export default function Team(){
     <main className="bg-gra rounded-sm text-gray-100  bg-gray-900/5  snap-y snap-mandatory h-screen overflow-x-hidden  select-none">
       <HeadTag title="Team | AutoZ" cardTitle="TEAM MEMBERS | AutoZ" description="US | AutoZ" image="" ></HeadTag>
          <Top main={"Team Members"} sub="AutoZ" mini={""}></Top>
-
+      
 
 
      <div className="hidden md:block my-auto h-full snap-y snap-mandatory ">

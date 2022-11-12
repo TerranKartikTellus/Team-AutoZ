@@ -56,7 +56,7 @@ function ListSM({route}){
 function PSMhome({route}){
 
   return(
-    <div className="bg-green500 text-gray-100/50 w-3/5 flex flex-col items-center justify-evenly">
+    <div className="bg-green500 text-gray-100/50 w-3/5 text-xs translate-x-2 flex flex-col items-center justify-evenly">
      
   <Opacity initial={0} final={1} delay={4.5} duration={0.3}>
 <Link href={"/projects"}>
