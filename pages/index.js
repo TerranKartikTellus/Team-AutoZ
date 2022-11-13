@@ -15,7 +15,7 @@ export default function Home() {
       <HeadTag title="Home | AutoZ" cardTitle="Home | AutoZ" description="Research and Development team, VIT Vellore" image="" ></HeadTag>
       <Link href="/recruitment">
       <a  className="flex flex-col  items-center justify-between space-y-2  fixed top-5 right-5 text-white  tracking-widest ">
-        <div className="bg-slate-100/80 rounded-md hover:invert hover:bg-opacity-50 transition-all duration-200 ease-in-out p-2 md:p-5"><img src="/svg/twoPeople.svg" className="md:w-8 md:h-8 w-5 h-5"></img></div>
+        <div className="bg-slate-100/80 rounded-md hover:bg-slate-100/10 group hover:bg-opacity-50 transition-all duration-200 ease-in-out p-2 md:p-5"><img src="/svg/twoPeople.svg" className="group-hover:invert md:w-8 md:h-8 w-5 h-5"></img></div>
         <div className='text-center'>Recruitment<br></br> 2022-2023</div>
       </a>
       </Link>
