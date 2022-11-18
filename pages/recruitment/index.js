@@ -57,6 +57,12 @@ function ShowQuestions({q}){
     </div>
     <div className=" md:w-1/2 py-14 my-8 ">
       <div className="overflo pt-[2900px] md:pt-[1800px] ">
+        <div className="md:hidden mb-10"> 
+        <video controls autoPlay src="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/mylivewallpapers.com-Spaceman-with-Dog.mp4?alt=media&token=6138d067-509e-4fa1-8115-f022032be9fd" id="vid"     className="w-[400px]"   >
+         <source autoPlay src={"https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/mylivewallpapers.com-Spaceman-with-Dog.mp4?alt=media&token=6138d067-509e-4fa1-8115-f022032be9fd"}  id="vid"
+          type="video/mp4" />No video found
+        </video>
+         </div>
         <div className=" tracking-wider text-sm ml-5 ">Try today</div>
         {q.map((i,index)=>{
           return (
