@@ -45,7 +45,7 @@ function ProjectList({projects}){
           
           <Link key={i} href="/projects"><a>
             
-            <p  className="inline-block  my-1 mr-1 hover:bg-gray-100/20 tracking  text-gray-100 text-base bg-gra100/10 rounded-sm ">{i.title} }</p> 
+            <p  className="inline-block  my- hover:bg-gray-100/20 tracking  text-gray-100 text-base bg-gra100/10 rounded-sm mr-5 p-1">{i.title} </p> 
           </a></Link>
         
         )) }
@@ -61,8 +61,8 @@ function PartSM1(){
     <div className="relative w-full h-screen flex flex-col item-center justify-center">
         <img src="/autozlogo.png" className="h-[70px] opacity-90 object-cover w-5/6 mx-auto mb-10"></img>
         {/* <div className="text-3xl mb-3 pb-5 tracking-wider opacity-80 border-b-2 border-gray-100/40 text-gray-50  text-center  pb-2">Automating <p>Vehicles   A to Z | AutoZ</p></div> */}
-        <div className="tracking-wide text-xl px-3 opacity-75 text-center">   
-        We work on developing autonomous vehicles and automated systems. Our team comprises a diverse set of people having prior experience in industrial projects. Striving to make a change for the betterment of humanity through the extensive use of technology to mimic human intelligence.
+        <div className="tracking-wide text-xl px-3 opacity-75 text-right">   
+        We work on developing <br></br>autonomous vehicles and automated systems.<br></br> Our team comprises a diverse set of people having prior experience in industrial projects. Striving to make a change for the betterment of humanity through the extensive use of technology to mimic human intelligence.
         <div><ProjectList projects={projects}></ProjectList></div>
 
         </div>
