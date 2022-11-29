@@ -20,7 +20,7 @@ export default function Contact(){
   
       />
          <Top main={"Contact"} sub="AutoZ" mini={""}></Top>
-         <div className="mx-auto md:w-2/6 md:scale-90 h-full "><Icon></Icon></div>
+         <div className="mx-auto md:w-2/6 md:scale-90 h-full op"><Icon></Icon></div>
         
     </main>
   );
@@ -88,7 +88,7 @@ const [sendSuccess , setMessage] = useState("");
     if(document.getElementById("messageId").value == "" || document.getElementById("nameId").value == "" || document.getElementById("emailId").value == ""){
 
       if(document.getElementById("emailId").value == ""){
-        setE("Please enter your email !");
+        setE("Please enter your email ");
         toast.error('Email not found',{duration: 3000,});
       }
       if(document.getElementById("nameId").value == ""){
@@ -96,7 +96,7 @@ const [sendSuccess , setMessage] = useState("");
         toast.error('Name not  found',{duration: 4000,});
       }
        if(document.getElementById("messageId").value == ""){
-        setM("Add me a message !");
+        setM("Add a message ");
         toast.error('Message not found',{duration: 2000,});
       }
     }
@@ -148,7 +148,7 @@ function SentFailed(){
           );         
 }
   return(
-     <div className=" lg:w-[370px] lg:h-96 h-5/6 lg:p-5 lg:rounded-sm py-5 md:py-0 mx-auto text-left  mt-3 w-full flex flex-col items-center justify-center lg:mt-0  bg-gray-50 rounded-sm hover:shadow-2xl transition-all duration-300 ease-in-out tracking-widest bg-red ">
+     <div className="bg-opacity-80 lg:w-[370px] lg:h-96 h-5/6 lg:p-5 lg:rounded-sm py-5 md:py-0 mx-auto text-left  mt-3 w-full flex flex-col items-center justify-center lg:mt-0  bg-gray-50 rounded-sm hover:shadow-2xl transition-all duration-300 ease-in-out tracking-widest bg-red ">
                                                <div className="pb-5 lg:hidden">
       <svg className="fill-gray-900 w-32 h-32 mx-auto " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm22 16l-6.526-6.618-3.445 3.483-3.418-3.525-6.611 6.66 5.051-8-5.051-6 10.029 7.446 9.971-7.446-4.998 6.01 4.998 7.99z"/></svg>
        <div className="text-base bg-red400 px-20 k text-gray-900 text-center">Always good to hear from you, We are always looking for opportunities</div>
@@ -156,31 +156,31 @@ function SentFailed(){
       </div>
                                                 <form ref={form} onSubmit={sendMail} className="w-10/12  flex flex-col items-center justify-center  space-y-3">
                                                           <div className=" relative  w-full mx-auto scale-95 lg:scale-100">
-                                                                    <div className="w-full absolute top-1  left-1 font-sans text-gray-500 text-xs">
-                                                                       <label htmlFor="name"> Name <span className="bg-red-600 text-white">{alertN}</span></label>
+                                                                    <div className="w-full absolute top-1  left-1 font-sans text-black font-medium text-sm">
+                                                                       <label htmlFor="name"> Name <span className="text-red-600 text-white rounded ">{alertN}</span></label>
                                                                     </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                       <input onChange={(e)=>{onChangeName(e)}} className="first-letter:capitalize w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="" autoComplete="off" id="nameId" name="from_name" type={"text"}></input>
+                                                                       <input onChange={(e)=>{onChangeName(e)}} className="bgpacity-80 first-letter:capitalize w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-transparent" placeholder="" autoComplete="off" id="nameId" name="from_name" type={"text"}></input>
                                                                     </div>
                                                           </div>
 
                                                           <div className=" relative  w-full mx-auto scale-95 lg:scale-100">
-                                                                    <div className="w-full absolute top-1  left-1 font-sans text-gray-500 text-xs">
-                                                                        <label htmlFor="name">Email <span className="bg-red-600 text-white"> {alertE}</span></label>
+                                                                    <div className="w-full absolute top-1  left-1 font-sans text-black font-medium text-sm">
+                                                                        <label htmlFor="name">Email <span className="text-red-600 tex-white rounded "> {alertE}</span></label>
                                                                        
                                                                       </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                     <input onChange={(e)=>{onChangeEmail(e) }} className="w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="" autoComplete="off" id="emailId" name="from_email" type={"email"}></input>
+                                                                     <input onChange={(e)=>{onChangeEmail(e) }} className="w-full px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-transparent" placeholder="" autoComplete="off" id="emailId" name="from_email" type={"email"}></input>
                                                                      
                                                                     </div>
                                                           </div>
 
                                                           <div className=" relative  w-full mx-auto scale-95 lg:scale-100">
-                                                                    <div className="w-full absolute top-1  left-1 font-sans text-gray-500 text-xs">
-                                                                       <label htmlFor="name">Message <span className="text-right bg-red-600 text-white">{alertM}</span></label>
+                                                                    <div className="w-full absolute top-1  left-1 font-sans text-black font-medium text-sm">
+                                                                       <label htmlFor="name">Message <span className="text-right text-red-600  rounded text-white">{alertM}</span></label>
                                                                       </div>
                                                                     <div className="w-full font-sans text-gray-800  ">
-                                                                        <textarea onChange={ (e)=>onChangeMessage(e) } className="w-full h-24 px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-gray-50" placeholder="" autoComplete="off" id="messageId" name="message" type={"text"}></textarea>
+                                                                        <textarea onChange={ (e)=>onChangeMessage(e) } className="w-full h-24 px-2 pb-1 pt-5 border-b-2 border-gray-400 rounded outline-none text-base font-sans font-medium placeholder-gray-800 bg-transparent" placeholder="" autoComplete="off" id="messageId" name="message" type={"text"}></textarea>
                                                                       
                                                                      </div>
                                                           </div>
