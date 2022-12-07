@@ -68,7 +68,7 @@ function ShowQuestions({q}){
  
     </div> */}
     <div className=" md:w-3/5 py-14 my-10 overflow-x-hidden">
-      <div className="mx-auto overflo pt-[6100px] md:pt-[3200px] ">
+      <div className="mx-auto overflo pt-[6200px] md:pt-[3700px] ">
         {/* <div className="rounded-md md:hidden mx-auto bed-400 mb-10"> 
         <video className="rounded-md mx-auto" controls autoPlay src="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/mylivewallpapers.com-Spaceman-with-Dog.mp4?alt=media&token=6138d067-509e-4fa1-8115-f022032be9fd" id="vid"       >
          <source autoPlay src={"https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/mylivewallpapers.com-Spaceman-with-Dog.mp4?alt=media&token=6138d067-509e-4fa1-8115-f022032be9fd"}  id="vid"
@@ -78,10 +78,13 @@ function ShowQuestions({q}){
         {/* <div className=" tracking-wider text-sm ml-5 ">Try today</div> */}
         {q.map((i,index)=>{
           return (
-            <Link  key={index} href={i[3] ? i[3] : '/'}>
+            <div key={index}>
+{i.length==1 && <div key={index} className="bg-gray-100 text-black text-xl p-2 mt-20">{i[0]}</div>}
+{ i.length > 1 &&
+            <Link   href={i[3] ? i[3] : '/'}>
             <a target="_blank" className=" text-white relative group z-50  tracking-wide   border-b  rounded-sm m-3 p-5 group block transition-all duration-500 ease-in-out">
             {/* {<div className="absolute transition-all ease-in-out duration-200 translate-x-5 md:group-hover:translate-x-0 top-1 right-1  hover:underline md:group-hover:opacity-100 opacity-0"><Link href={i[3] ? i[3] : '/'}><a className="bg-gray-100 text-gray-900 tracking-widest p-2 text-base ">Link</a></Link></div>} */}
-            <div className=" text-2xl fn font-medium pb-2     opacity-"><strong className="tracking-wide opacity-90">Questions {index+1}: {i[0]}</strong></div>
+            <div className=" text-2xl fn font-medium pb-2     opacity-"><strong className="tracking-wide opacity-90">Q. {i[0]}</strong></div>
             <div className="flex md:flex-row flex-col w-full md:items-center md:justify-around">
             <div className="w-full md:w-8/12 border-t-[1p border-black py-1 opacity-80 tracking-wider"><strong>Skills required:</strong> {i[1]}</div>
             
@@ -93,7 +96,8 @@ function ShowQuestions({q}){
             </div>
             </div>
           </a>
-            </Link>
+            </Link>}
+            </div>
           )
         })}
         </div>
