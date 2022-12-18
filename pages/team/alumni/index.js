@@ -53,7 +53,7 @@ export default function Team(){
                   <div className="  text-xl font-medium text-right tracking-wider overflow-hidden mb-2">{i.name}</div>
                                     
                   {i.currently && <div className=" opacity-90 contrast-125 font-medium overflow-hidden text-right font-thin tracking-wide">{i.currently}</div>}
-                  {i.currently && <div className=" opacity-90 overflow-hidden text-right font-thin tracking-wide">Currently at</div>}
+                  {i.currently && <div className=" opacity-90 overflow-hidden text-right font-thin tracking-wide"></div>}
                 </div>
               </div>
             </div>
