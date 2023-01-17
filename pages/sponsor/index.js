@@ -63,15 +63,14 @@ function Part1(){
           {/* <HandShake></HandShake> */}
            
       <div className="hidden fixed bottom-10 mx-auto  g-red-300 md:block md:w-full opacity-75">
-         
-        <div className="flex  mx-auto left-auto right-auto  flex-row items-center justify-evenly w-5/6 mx-auto bg-gray-50">
+         <div className="flex  mx-auto left-auto right-auto  flex-row items-center justify-evenly w-5/6 mx-auto bg-gray-50">
          <div className="text-center text-black text-xs "><Link href="https://www.ansys.com/en-in"><a><img className=" contrast-150 w-full h-16  object-cover" src="/img/sponsors/ansys.png"></img></a></Link></div>
+         <div  className="text-center text-black text-xs mt-5 mb-2 "><Link href="https://www.altium.com"><a><img className=" contrast-150 w-full h-16 r" src="/svg/altium.svg"></img></a></Link></div>
          <div className="text-center text-black text-xs "><Link href="https://www.pcbpower.com/"><a><img className=" contrast-150  w-full h-16 object-cover" src="/img/sponsors/pcb.png"></img></a></Link></div>
          <div  className="text-center text-black text-xs "><Link href="https://www.solidworks.com/"><a><img className=" contrast-150 w-full h-16  object-cover" src="/img/sponsors/port 3.png"></img></a></Link></div>
-         <div  className="text-center text-black text-xs "><Link href="https://www.xsens.com/"><a><img className=" contrast-150 w-full h-16 pb object-cover" src="/img/sponsors/port1.png"></img></a></Link></div>
          <div  className="text-center text-black text-xs "><Link href="https://www.tdk.com/en/index.html"><a><img className=" contrast-150 w-full h-16  object-cover" src="/img/sponsors/TDK.png"></img></a></Link> </div>
-         <div  className="text-center text-black text-xs mt-5 mb-2 "><Link href="https://www.mathworks.com/"><a><img className=" contrast-150 w-full h-16 r" src="/img/sponsors/matlab.svg"></img></a></Link></div>
-        </div>
+         <div  className="text-center text-black text-xs "><Link href="https://www.xsens.com/"><a><img className=" contrast-150 w-full h-16 pb object-cover" src="/img/sponsors/port1.png"></img></a></Link></div>
+      </div>
                     <div className="mx-auto bg-gr500 text-center flex flex-row items-center justify-center text-gray-900 w-5/6 bg-gray-50">              View Sponsorship Brochure  <Link  href="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/Team%20AutoZ%20Sponsorship%20Brochure%202022-23.pdf?alt=media&token=8c7cd748-06b8-441e-b8a5-47183644ff9e"><a target="_blank" className="underline">here</a></Link></div>
 
     </div>
