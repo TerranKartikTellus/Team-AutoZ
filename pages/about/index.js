@@ -58,7 +58,7 @@ function ProjectList({projects}){
 
 function PartSM1(){
   return(
-    <div className="relative w-full h-screen flex flex-col item-center justify-center">
+    <div className="relative w-full h-screen flex flex-col item-center justify-center ">
         <img src="/autozlogo.png" className="h-[70px] opacity-90 object-cover w-5/6 mx-auto mb-10"></img>
         {/* <div className="text-3xl mb-3 pb-5 tracking-wider opacity-80 border-b-2 border-gray-100/40 text-gray-50  text-center  pb-2">Automating <p>Vehicles   A to Z | AutoZ</p></div> */}
         <div className="tracking-wide text-xl px-3 opacity-75 text-right">   
@@ -131,7 +131,7 @@ function Part1(){
 
         {/* <Roboat></Roboat>
          */}
-         <img src="/autozlogo.png" className="h-[70px]"></img>
+         <img src="/autozlogo.png" className="h-[70px] mb-10"></img>
          </Opacity>
         <Opacity initial={0} final={1} duration={1/3} delay={1.1}>
 
@@ -163,9 +163,9 @@ Striving to make a change for the betterment of humanity through the extensive u
 
       <div className="w-1/2 pl-4 bg-red500 h-5/6 my-auto opacit">
           {/* <Opacity className="w-full h-full" initial={0} final={1} duration={1/3} delay={2.3}> */}
-          <div className="h-full w-1/2  text-xl px- text-left m  my-auto bordel-2 text-gray-100/70 py-20 font-sans flex flex-col items-start  justify-center ">
+          <div className="h-full w-1/2  text-xl px- text-left m p  my-auto bordel-2 text-gray-100/70 py-20 font-sans flex flex-col items-start  justify-center ">
            <Opacity initial={0} final={1} duration={1/3} delay={1.4}>
-            We work on developing autonomous vehicles and automated systems. Our team comprises a diverse set of people having prior experience in industrial projects. 
+            We work on developing <br></br>autonomous vehicles and automated systems. Our team comprises a diverse set of people having prior experience in industrial projects. 
 <br></br>
 
           </Opacity>
