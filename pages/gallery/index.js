@@ -1,14 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeadTag from "../../components/common/head";
 import Top from "../../components/common/top";
 import { galary } from "../../lib/data/galary";
+import firebase from "firebase/app";
+import { firebaseConfig } from "../../lib/firebase/firebase";
+import { getStorage, ref, listAll } from "firebase/storage";
+import { storage } from "../../lib/firebase/firebase";
+import Image from "next/image";
+
 
 export default function Gallery1(){
   const [view,setView] = useState(false);
   function toggleView(){ setView(!view); }
   const [viewImage,setViewImage] = useState();
   function toggleViewImage(src){  }
-  
+    const [images, setImages] = useState([]);
+// var galary = [];
+    
+    
+//     useEffect(() => {
+//         const imagesRef = storage.ref( 'galary/galary_v0');
+//    imagesRef.listAll().then(function(result) {
+//     // console.log('result',result._delegate.items);
+//   result.items.forEach(function(imageRef) {
+//     // Get the URL for each image
+//     console.log('res',imageRef.getDownloadURL());
+//     imageRef.getDownloadURL().then(function(url) {
+//       galary.push({'img':url});      console.log(galary);
+//     });
+//   });
+// }).catch(function(error) {
+//   console.error("Error retrieving images: ", error);
+// });
+
+
+//   }, []);
+
+
   return(
     <main className="bg-gra rounded-sm text-gray-100  bg-gray900   snap-y snap-mandatory h-screen overflow-x-hidden  select-none">
       <HeadTag title="Gallery | AutoZ" cardTitle="Gallery | AutoZ" description="Gallery | AutoZ" image="" ></HeadTag>
@@ -42,7 +70,7 @@ export default function Gallery1(){
 // }
 function Show({arr,toggleView,toggleViewImage}){
  
-  console.log(arr);
+  // console.log(arr);
   return(
     <section className="overflow-hidden text-gray-700 w-10/12  mt- mt-5 bg-green200   mx-auto">
         
@@ -59,7 +87,7 @@ function Show({arr,toggleView,toggleViewImage}){
                     <div className="w-full text-center  text-base">About</div>
                     <div className="w-full text-center  text-sm">More</div>
                   </div> */}
-                  <img    alt="gallery" className=" block object-cover object-center w-full h-full rounded-lg h-[160px]  grays   "
+                  <Image layout='fill'  loading={'lazy'}   alt="gallery" className="laz block object-cover object-center w-full h-full rounded-lg h-[160px]  grays   "
                     src={arr[0].img} />
                 </div>
                 }
