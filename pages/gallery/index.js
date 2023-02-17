@@ -18,18 +18,18 @@ export default function Gallery1({imageURLs}){
     let images = []
   let temp = []
 
-console.log(imageURLs);
+// console.log(imageURLs);
   for(let i=0;i<imageURLs.length;i++){
     temp.push({'img':imageURLs[i]})
     if(temp.length==6){
       images.push(temp)
       temp = []
     }
-    if(i==i.length-1){
+    if(i==imageURLs.length-1){
       images.push(temp)
     }
   }
-  console.log('images:',images);
+  // console.log('images:',images);
   let galary = images
 
   return(
