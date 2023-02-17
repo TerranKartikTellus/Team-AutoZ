@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projects } from "../../lib/data/projects";
 
-export default function Galary(){
-  
+export default function Galary({a}){
+  console.log('images: ',a);
+
   return(
     <div className="h-screen text-gray-100 bg-red500 w-screen">
         {/* <div className="text-gray-100 bg-red-400 hidden md:block">Our most promissinng projects</div> */}
@@ -149,4 +150,5 @@ function ShowSm({projects}){
     </div>
   );
 }
+
 

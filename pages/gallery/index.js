@@ -1,41 +1,36 @@
 import { useEffect, useState } from "react";
 import HeadTag from "../../components/common/head";
 import Top from "../../components/common/top";
-import { galary } from "../../lib/data/galary";
+// import { galary } from "../../lib/data/galary";
 import firebase from "firebase/app";
-import { firebaseConfig } from "../../lib/firebase/firebase";
+import { firebaseConfig, storageRef } from "../../lib/firebase/firebase";
 import { getStorage, ref, listAll } from "firebase/storage";
 import { storage } from "../../lib/firebase/firebase";
 import Image from "next/image";
 
 
-export default function Gallery1(){
+export default function Gallery1({imageURLs}){
   const [view,setView] = useState(false);
   function toggleView(){ setView(!view); }
   const [viewImage,setViewImage] = useState();
   function toggleViewImage(src){  }
-    const [images, setImages] = useState([]);
-// var galary = [];
-    
-    
-//     useEffect(() => {
-//         const imagesRef = storage.ref( 'galary/galary_v0');
-//    imagesRef.listAll().then(function(result) {
-//     // console.log('result',result._delegate.items);
-//   result.items.forEach(function(imageRef) {
-//     // Get the URL for each image
-//     console.log('res',imageRef.getDownloadURL());
-//     imageRef.getDownloadURL().then(function(url) {
-//       galary.push({'img':url});      console.log(galary);
-//     });
-//   });
-// }).catch(function(error) {
-//   console.error("Error retrieving images: ", error);
-// });
 
+    let images = []
+  let temp = []
 
-//   }, []);
-
+console.log(imageURLs);
+  for(let i=0;i<imageURLs.length;i++){
+    temp.push({'img':imageURLs[i]})
+    if(temp.length==6){
+      images.push(temp)
+      temp = []
+    }
+    if(i==i.length-1){
+      images.push(temp)
+    }
+  }
+  console.log('images:',images);
+  let galary = images
 
   return(
     <main className="bg-gra rounded-sm text-gray-100  bg-gray900   snap-y snap-mandatory h-screen overflow-x-hidden  select-none">
@@ -153,4 +148,19 @@ function FullScreen({link}){
   return (
     <img src={link} className={"w-full h-full object-cover"}></img>
   );
+}
+
+
+export async function getServerSideProps() {
+  const imageRefs = await storageRef.child('galary/galary_v0').listAll();
+  const imageURLs = await Promise.all(
+    imageRefs.items.map((item) => item.getDownloadURL())
+  );
+
+  
+  return {
+    props: {
+    imageURLs,
+    },
+  };
 }
