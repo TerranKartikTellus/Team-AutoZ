@@ -72,8 +72,8 @@ function Show({arr,toggleView,toggleViewImage}){
        
         <section className="overflow-hidden z-0 text-gray-700 w-full ">
           <div className="container px py2 z-0 mx-auto lg4 w-full lg:px-32">
-            <div className="flex flex-col z-0 md:flex-row  -m-1 md:-m-2">
-              <div className="flex flex-wrap z-0  md:w-1/2">
+            <div className="flex flex-col z-0 md:flex-row   md:-m-2">
+              <div className="flex flex-wrap z-0  md:w-1/2 mx-auto">
                 
                 {
                   arr[0]!=null && <div onClick={()=>{ toggleView(); toggleViewImage(arr[0].img) }} className="z-0 w-1/2 p-1 md:p-2 relative group">

@@ -46,7 +46,7 @@ function Show({projects}){
                 <div className="text-5xl tracking-wider">{i.title}</div>
                 
                 {/* <div className="opacity-60 text-xs">{i.date}</div> */}
-                <div className="opacity-60 text-base">{i.about}</div>
+                {/* <div className="opacity-60 text-base">{i.about}</div> */}
                 <div className="opacity-80 text-lg">{i.description}</div>
                 <div className="flex flex-rwo items-center justify-start">
                   <div>
@@ -132,7 +132,7 @@ function ShowSm({projects}){
             <div className="h-auto space-y-2 p bgred-400  flex flex-col items-center justify-center">
               
                 {/* <div className="text-center text-xs opacity-80 tracking-wider">{i.date}</div> */}
-                <div className="text-center opacity-60 text-base">{i.about}</div>
+                {/* <div className="text-center opacity-60 text-base">{i.about}</div> */}
                 <div className="text-center opacity-80 text-lg">{i.description}</div>
                 <div><Link href="/">
                   <a className="flex underline flex-row item-center justify-center space-x-3">
