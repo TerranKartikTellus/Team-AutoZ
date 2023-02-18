@@ -23,13 +23,13 @@ function MyApp({ Component, pageProps }) {
   return <main className=' font-Maven bg-black relative h-full w-full'>
 
     <video id="myVideo" preload="auto"  className="bg-cover opacity-50 saturate-200  hidden md:block object-cover w-full h-full absolute top-0 left-0"  autoPlay loop muted >
-      <source rel="preload" src="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/mylivewallpapers.com-Spaceman-with-Dog.mp4?alt=media&token=6138d067-509e-4fa1-8115-f022032be9fd" type="video/mp4" />
+      <source rel="preload" src="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/bg-v.mp4?alt=media&token=8d50e27d-ecd6-4a6b-a549-d474b55f184d" type="video/mp4" />
       <div rel="preload"  className='bg-backgroundLG h-full w-full bg-cover'></div>
     </video>
       
       
     <video id="myVideo" preload="auto" className="bg-cover opacity-50 saturate-200  block md:hidden object-cover w-full h-full  absolute top-0 left-0"  autoPlay loop muted >
-      <source src="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/MOBILE-Spaceman-with-Dog.mp4?alt=media&token=26c4e4aa-bffa-4798-83e1-66913933164d" type="video/mp4" />
+      <source rel="preload" src="https://firebasestorage.googleapis.com/v0/b/autoz-8611b.appspot.com/o/bg-m-v.mp4?alt=media&token=0120e773-0a30-408d-8559-27ed16af2d23" type="video/mp4" />
       <div className='bg-backgroundSM h-full  w-full bg-cover'></div>
     </video>
     <div rel="preload" className='bg-black/40 w-full   h-full absolute top-0 left-0 animate-'>.</div>

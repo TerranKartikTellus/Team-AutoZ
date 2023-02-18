@@ -15,20 +15,33 @@ export default function Galary({a}){
 }
 
 function Show({projects}){
-  const [showMore , setShoMore] = useState();
+  
+  const [view,setView] = useState(false);
+const [item,setItem] = useState(null)
+
 
   return(
     <div className="text-gray-100 200/30 hidden md:block my-auto h-full snap-y snap-mandatory scroll">
       {/* <div className="w-1/2"></div> */}
+      
+      {
+        view  ? <div className="fixed  top-0 left-0 z-50 bg-gray-600/80 rounded-xl w-full h-full flex p-4 md:p-0 flex-col items-center justify-center">
+          <button className="fixed bottom-8 invert opacity-70 z-50  md:top-3 right-3 text-black" onClick={()=>{setView(!view)}}><img className="w-7 hover:opacity-75 h-7" src="/svg/close.svg"></img></button>
+           <img alt={'Loading Please Wait'} src={item} className="md:w-8/12 md:h-5/6 w-full   shadow-xl object-cover rounded-xl"></img>
+           
+          <img></img>
+        </div>
+        :
+
       <div className="z-30 ">
       {
         projects.map(i=>(
           <div key={i} className="z-30 h-screen snap-center flex flex-row justify-center items-center">
             <div className="w-5/12 flex flex-col items-center justify-center">
               <div className="w-full h-full mx-auto flex relative flex-row items-center  justify-center border-b-2 border-gray-50/50">
-              <img className="z-50 hover:z-10 grays   transition-all duration-300 opacity-90 w-[280px] h-[280px] opacity-100 hover:grayscale-0  border2 order-gray-50/60 object-cover rounded-sm absolute -translate-x-16" src={i.img1}></img> 
-               <img className="z-10 hover:z-50 grayscale  transition-all duration-300 opacity-90 w-[180px] h-[180px] opacity-100 hover:grayscale-0  border2 order-gray-50 absolute translate-y-28 translate-x-24 object-cover rounded-sm" src={i.img2}></img>
-               <img className="z-10 hover:z-50 grayscale  transition-all duration-300 opacity-80 w-[200px] h-[200px] opacity-100 hover:grayscale-0  border2 order-gray-50/80 absolute -translate-y-32 translate-x-20 object-cover rounded-sm" src={i.img3}></img>
+              <img   className="z-50 hover:z-10 grays   transition-all duration-300 opacity-90 w-[280px] h-[280px] opacity-100 hover:grayscale-0  border2 order-gray-50/60 object-cover rounded-sm absolute -translate-x-16" src={i.img1}></img> 
+               <img  className="z-10 hover:z-50 grayscale  transition-all duration-300 opacity-90 w-[180px] h-[180px] opacity-100 hover:grayscale-0  border2 order-gray-50 absolute translate-y-28 translate-x-24 object-cover rounded-sm" src={i.img2}></img>
+               <img  className="z-10 hover:z-50 grayscale  transition-all duration-300 opacity-80 w-[200px] h-[200px] opacity-100 hover:grayscale-0  border2 order-gray-50/80 absolute -translate-y-32 translate-x-20 object-cover rounded-sm" src={i.img3}></img>
              
               </div>
             </div>
@@ -65,6 +78,7 @@ function Show({projects}){
         ))
       }
       </div>
+  }
     </div>
   );
 }
